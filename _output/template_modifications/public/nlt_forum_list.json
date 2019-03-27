@@ -1,0 +1,9 @@
+{
+    "template": "forum_list",
+    "description": "",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:macro name=\"node_list\" arg-children=\"{$nodeTree}\" arg-extras=\"{$nodeExtras}\" />",
+    "replace": "<xf:macro template=\"nlt_forum_list_macros\"\n\t\t  name=\"tab_heading\" arg-nodeTree=\"{$nodeTree}\"/>\n<ul class=\"tabPanes js-ntlTabPanes\">$0</ul>"
+}

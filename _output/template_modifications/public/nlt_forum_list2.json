@@ -1,0 +1,9 @@
+{
+    "template": "forum_list",
+    "description": "Render tab content",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "#(<xf:foreach loop=\"\\$children\" key=\"\\$id\" value=\"\\$child\">)(.+?)(</xf:foreach>)#s",
+    "replace": "<xf:set var=\"$nltDepth\"><xf:callback class=\"Truonglv\\NodeListTabs\\Listener\"\n\t\t\t\t\t\t\t\t\t method=\"getNodeListDepth\">1</xf:callback></xf:set>\n$1\n<xf:if is=\"$nltDepth is not empty\">\n\t<xf:set var=\"$nodeTitleId\"><xf:callback class=\"Truonglv\\NodeListTabs\\Listener\"\n                    method=\"getTabHashId\">{$child.record.title}-{$child.id}</xf:callback></xf:set>\n\t<li role=\"tabpanel\" id=\"node-{$nodeTitleId}\">\n</xf:if>\n\t$2\n<xf:if is=\"$nltDepth is not empty\"></li></xf:if>\n$3"
+}

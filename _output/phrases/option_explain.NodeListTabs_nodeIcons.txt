@@ -1,0 +1,5 @@
+Prepend font awesome icon before node title. Option value must be following format:<br/>
+<code>nodeId|iconName</code><br>
+Eg: <br>
+10|fa-bar<br>
+11|fa-foo<br>

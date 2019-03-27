@@ -1,0 +1,9 @@
+{
+    "template": "extra.less",
+    "description": "Render our css",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "#\\A.*\\Z#s",
+    "replace": "$0\n.NodeListTabs_Icon {\n\tmargin-right: 3px;\n}"
+}

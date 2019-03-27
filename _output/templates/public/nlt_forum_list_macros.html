@@ -1,0 +1,21 @@
+<xf:macro name="tab_heading" arg-nodeTree="!">
+    <h2 class="block-tabHeader block-tabHeader--memberTabs tabs hScroller"
+        data-xf-init="tabs h-scroller"
+        data-panes=".js-ntlTabPanes"
+        data-state="replace"
+        role="tablist">
+        <span class="hScroller-scroll">
+            <xf:foreach loop="$nodeTree" value="$entry">
+                <xf:set var="$nodeTitleId"><xf:callback class="Truonglv\NodeListTabs\Listener"
+                    method="getTabHashId">{$entry.record.title}-{$entry.id}</xf:callback></xf:set>
+                <xf:set var="$faIcon"><xf:callback class="Truonglv\NodeListTabs\Listener"
+                    method="getNodeFAIcon">{$entry.id}</xf:callback></xf:set>
+                <a href="#node-{$nodeTitleId}" class="tabs-tab"
+                   role="tab"
+                   aria-controls="node-{$nodeTitleId}"><xf:comment>
+                </xf:comment><xf:if is="$faIcon is not empty"><i class="NodeListTabs_Icon fa {$faIcon}" aria-hidden="true"></i></xf:if><xf:comment>
+                    </xf:comment>{$entry.record.title}</a>
+            </xf:foreach>
+        </span>
+    </h2>
+</xf:macro>

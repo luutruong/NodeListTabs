@@ -1,0 +1,16 @@
+{
+    "legacy_addon_id": "",
+    "title": "[tl] Node List as Tabs",
+    "description": "Display node list as tabs",
+    "version_id": 1000000,
+    "version_string": "1.0.0",
+    "dev": "Truonglv",
+    "dev_url": "https://nobita.me",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": {
+        "Icon License": "https://www.flaticon.com/free-icon/web-tabs_13627"
+    },
+    "require": [],
+    "icon": "icon.png"
+}
