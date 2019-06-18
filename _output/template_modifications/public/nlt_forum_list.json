@@ -1,6 +1,6 @@
 {
     "template": "forum_list",
-    "description": "",
+    "description": "Render tabs heading",
     "execution_order": 10,
     "enabled": true,
     "action": "str_replace",

@@ -10,9 +10,8 @@
                     method="getTabHashId">{$entry.record.title}-{$entry.id}</xf:callback></xf:set>
                 <xf:set var="$faIcon"><xf:callback class="Truonglv\NodeListTabs\Listener"
                     method="getNodeFAIcon">{$entry.id}</xf:callback></xf:set>
-                <a href="#node-{$nodeTitleId}" class="tabs-tab"
-                   role="tab"
-                   aria-controls="node-{$nodeTitleId}"><xf:comment>
+                <a href="#{$nodeTitleId}" class="tabs-tab" role="tab"
+                   aria-controls="{$nodeTitleId}"><xf:comment>
                 </xf:comment><xf:if is="$faIcon is not empty"><i class="NodeListTabs_Icon fa {$faIcon}" aria-hidden="true"></i></xf:if><xf:comment>
                     </xf:comment>{$entry.record.title}</a>
             </xf:foreach>
