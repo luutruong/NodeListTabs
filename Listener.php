@@ -4,13 +4,24 @@ namespace Truonglv\NodeListTabs;
 
 class Listener
 {
+    /**
+     * @var int
+     */
     private static $nodeListDepth = 0;
 
+    /**
+     * @param string $title
+     * @return string
+     */
     public static function getTabHashId($title)
     {
         return \XF::app()->router()->prepareStringForUrl($title, true);
     }
 
+    /**
+     * @param mixed $depth
+     * @return int|null
+     */
     public static function getNodeListDepth($depth = null)
     {
         if (intval($depth) === 1) {
@@ -20,6 +31,10 @@ class Listener
         return (self::$nodeListDepth === 1) ? 1 : null;
     }
 
+    /**
+     * @param mixed $id
+     * @return string|null
+     */
     public static function getNodeFAIcon($id)
     {
         static $icons = null;
